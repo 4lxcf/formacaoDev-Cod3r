@@ -10,4 +10,4 @@ function promessaComPossivelErro (chanceErro) {
 
 promessaComPossivelErro(0.5)
     .then(v => console.log(v))
-    .catch(erro => console.log(erro)) //O 'catch' trata o possível erro que acontece na função
+    .catch(erro => console.log(erro)) //O 'catch' trata o possível erro que acontece na função retornada pelo REJECT
