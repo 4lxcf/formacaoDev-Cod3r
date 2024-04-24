@@ -25,7 +25,7 @@ function paraDiretoria(aluno) {
         result.materias.push(
             {
                 nome: `${materia.nome}`,
-                media: `${acc / materia.notas.length}`
+                media: `${(acc / materia.notas.length).toFixed(1)}`
             }
         )
     }
@@ -68,8 +68,7 @@ function paraResponsaveis(aluno) {
 
     for (const materia of alunoComAprovacao.materias) {
         if (materia.conceito === 'REPROVADO') {
-            return 'REPROVADO'
-             
+            return 'REPROVADO'   
         }
 
         if (materia.conceito === 'APROVADO') {
@@ -77,16 +76,13 @@ function paraResponsaveis(aluno) {
         }
     }
 
-    if (counter >= 4) {
+    if (counter > 3) {
         return 'APROVADO'
-    } else if (counter > 1) {
-        return 'RECUPERAÇÃO'
-    } else {
+    } else if (counter == 0) {
         return 'REPROVADO'
+    } else {
+        return `Seu filho/filha ficou de RECUPERAÇÃO em ${4 - counter} matéria(s).`
     }
-    
-    
-    
 }
 
 console.log(paraDiretoria(joaozinho))
