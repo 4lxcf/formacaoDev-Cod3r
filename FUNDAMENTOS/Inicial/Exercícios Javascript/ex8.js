@@ -2,7 +2,13 @@
 
 
 function criaObjeto(chaves, valores){
+    let result = {}
 
+    for (let index = 0; index < chaves.length; index++) {
+        result[`${chaves[index]}`] = valores[index]
+    }
+
+    return result
 }
 
 
