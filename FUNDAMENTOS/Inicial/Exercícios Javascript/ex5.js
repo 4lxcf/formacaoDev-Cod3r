@@ -3,7 +3,14 @@
  */
 
  function multiplicacaoDistributiva(array1, array2){
+    let arrayResult = []
+    for (const i of array1) {
+        for (const j of array2) {
+            arrayResult.push(`${i*j}`)
+        }
+    }
 
+    console.log(arrayResult)
  }
 
 const array1 = [1,2,3]
