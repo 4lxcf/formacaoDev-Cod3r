@@ -29,23 +29,51 @@ PR;PARANÁ;CURITIBA;SUL; `
 
 const linhasEstados = estados.split("\n")
 const arrayEstados = []
-console.log(arrayEstados)
+
+for (let index = 1; index < linhasEstados.length; index++) {
+    let infoEstados = linhasEstados[index].split(";")
+    let objectEstado = {
+        sigla: infoEstados[0],
+        estado: infoEstados[1],
+        capital: infoEstados[2],
+        regiao: infoEstados[3],
+    }
+
+    arrayEstados.push(objectEstado)
+}
 
 //Parte 2
 //Crie uma função que irá retornar todos os estados de uma determinada região
 
 function buscaPorRegiao(estados, regiaoDesejada){
+    let listaDeEstados = []
+
+    for (const iterator of estados) {
+        if (iterator.regiao === regiaoDesejada) {
+            listaDeEstados.push(iterator.estado)
+        }
+
+    }
+    
+    return listaDeEstados
 }
 
-// console.log(buscaPorRegiao(arrayEstados, "NORTE"))
-// console.log(buscaPorRegiao(arrayEstados, "SUL"))
+console.log(buscaPorRegiao(arrayEstados, "NORTE"))
+console.log(buscaPorRegiao(arrayEstados, "SUL"))
 
 //Parte 3
 //Retorne o estado de acordo com a sigla
 
 function buscaPorSigla(estados, siglaDesejada){
-    
+    let estadoProcurado = ''
+
+    for (const iterator of estados) {
+        if (iterator.sigla === siglaDesejada) {
+            estadoProcurado = iterator.estado
+            return estadoProcurado
+        }
+    }
 }
 
-//console.log(buscaPorSigla(arrayEstados, "RS"))
-//console.log(buscaPorSigla(arrayEstados, "AM"))
+console.log(buscaPorSigla(arrayEstados, "RS"))
+console.log(buscaPorSigla(arrayEstados, "AM"))
