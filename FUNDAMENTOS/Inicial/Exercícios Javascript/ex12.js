@@ -2,7 +2,23 @@
 //Caso o objeto passado como parâmetro seja vazio, o retorno deve ser um objeto vazio.
 
 function metadados(objeto) {
+	if (!objeto) {
+		return {}
+	}
 
+	let arrayMetadados = {}
+	
+	for (const key in objeto) {
+		if (arrayMetadados[`${typeof objeto[key]}`]) {
+			arrayMetadados[`${typeof objeto[key]}`] += 1
+		} else {
+			arrayMetadados[`${typeof objeto[key]}`] = 1
+		}
+	}
+	
+	objeto.metadados = arrayMetadados
+
+	return objeto
 }
 
 const carro = {
