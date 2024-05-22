@@ -10,41 +10,52 @@
   <title>Frontend Mentor | Results summary component</title>
 </head>
 <body>
-  <div class="result">
-    <div>
-      <span style="color: hsl(241, 100%, 89%); font-weight: 700;">Your Result</span>
+  <div class="card">
+    <div class="card-container">
+      <section class="result">
+        <h3 class="title">Your Result</h3>
+        <div class="circle">
+          <h1>76</h1>
+          <p style="color:hsl(246, 100%, 74%); font-weight: bold;">of 100</p>
+        </div>
+        <b>Great</b>
+        <p class="info">You scored higher than 65% of the people who have taken these tests.</p>
+      </section>
+      <section class="summary">
+        <h3 class="title">Summary</h3>
+        <div class="rows">
+          <div class="row">
+            <div class="badge">
+              <img src="./assets/images/icon-reaction.svg" alt="icon">
+              <b>Reaction</b>
+            </div>
+            <p><b>80</b> / 100</p>
+          </div>
+          <div class="row">
+            <div class="badge">
+              <img src="./assets/images/icon-memory.svg" alt="icon">
+              <b>Memory</b>
+            </div>
+            <p><b>92</b> / 100</p>
+          </div>
+          <div class="row">
+            <div class="badge">
+              <img src="./assets/images/icon-verbal.svg" alt="icon">
+              <b>Verbal</b>
+            </div>
+            <p><b>61</b> / 100</p>
+          </div>
+          <div class="row">
+            <div class="badge">
+              <img src="./assets/images/icon-visual.svg" alt="icon">
+              <b>Visual</b>
+            </div>
+            <p><b>72</b> / 100</p>
+          </div>
+        </div>
+        <button class="btn">Continue</button>
+      </section>
     </div>
-    <div>
-      <span style="color: hsl(0, 0%, 100%); font-size: 48px; font-weight: 900;">76</span>
-      <span style="color: hsl(246, 100%, 72%);">of 100</span>
-    </div>
-    <div>
-      <span style="color: hsl(0, 0%, 100%);">Great</span>
-      <span style="color: hsl(241, 100%, 89%);">
-        You scored higher than 65% of the people who have taken these tests.
-      </span>
-    </div>
-  </div>
-  <div class="summary">
-    Summary
-  
-    Reaction
-    80 / 100
-  
-    Memory
-    92 / 100
-  
-    Verbal
-    61 / 100
-  
-    Visual
-    72 / 100
-  
-    Continue
-  </div>
-  <div class="attribution" style="flex-direction: row; justify-content: center;">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Alexandre Ferreira</a>.
   </div>
 </body>
 </html>

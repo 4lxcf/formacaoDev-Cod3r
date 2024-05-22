@@ -1,30 +1,189 @@
-@font-face {
+@font-face{
     font-family: 'Hanken Grotesk';
     src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
 }
 
-body {
-    font-family: 'Hanken Grotesk', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    background-color: hsl(221, 100%, 96%);
+:root{
+    /* Primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+    --Light-slate-blue-background: hsl(252, 100%, 67%);
+    --Light-royal-blue-background: hsl(241, 81%, 54%);
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue-modified: hsl(224, 30%, 27%);
+    --Dark-gray-blue: hsl(246, 100%, 74%);
 }
 
-div {
-    border-radius: 25px;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Pale-blue);
+}
+
+.card{
+    box-shadow: rgba(0, 0, 0, .24) 0px 3px 8px;
+    border-radius: 2rem;
+    width: 650px;
+    background-color: var(--White);
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.result{
+    width: 50%;
+    padding: 1.5rem 2rem;
+    border-radius: 2rem;
+    background: linear-gradient(to bottom, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px 15px 25px 15px;
+    gap: 1rem;
 }
 
-.result {
-    background-color: hsl(234, 85%, 45%);
-    text-align: center;
+.result .title{
+    color: var(--Light-lavender);
+    margin-bottom: 1rem;
 }
 
-.summary {
-    background-color: hsl(0, 0%, 100%);
-    text-align: justify;
+.result .circle{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, var(--Violet-blue-circle), var(--Persian-blue-circle));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+.circle h1{
+    color: var(--White);
+    font-size: 4rem;
+    margin: 0;
+    gap: 0;
+}
+
+.result b{
+    color: var(--White);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.result .info{
+    color: var(--Light-lavender);
+    width: 220px;
+}
+
+.summary{
+    width: 50%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.summary .title{
+    color: 	var(--Dark-gray-blue-modified);
+    font-weight: 900;
+}
+
+.rows{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    padding: 0.8rem 0.5rem;
+    font-weight: 700;
+}
+
+.row:nth-child(1){
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.row:nth-child(1) .badge b{
+    color: var(--Light-red);
+}
+
+.row:nth-child(2){
+    background-color: hsl(39, 100%, 56%, 0.1);
+}
+
+.row:nth-child(2) .badge b{
+    color: var(--Orangey-yellow);
+}
+
+.row:nth-child(3){
+    background-color: hsl(166, 100%, 37%, 0.1);
+}
+
+.row:nth-child(3) .badge b{
+    color: var(--Green-teal);
+}
+
+.row:nth-child(4){
+    background-color: hsl(234, 85%, 45%, 0.1);
+}
+
+.row:nth-child(4) .badge b{
+    color: var(--Cobalt-blue);
+}
+
+.badge{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.row p{
+    color: gray;
+}
+
+.row p b{
+    color: var(--Dark-gray-blue-modified);
+    font-weight: 900;
+}
+
+.btn{
+    margin-top: auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--Dark-gray-blue-modified);
+    color: var(--White);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: linear-gradient(to bottom, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+}
