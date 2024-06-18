@@ -1,0 +1,26 @@
+#menu-titulo{
+    font-size: 2rem;
+    background-color: black;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+#menu-conteudo{
+    background-color: #bbb;
+}
+
+.menu-coluna{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.menu-coluna > a{
+    padding: 8px 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-coluna > a:hover{
+    background-color: #999;
+}
