@@ -1,13 +1,37 @@
 #menu-titulo{
     font-size: 2.5rem;
+    font-weight: 800;
     background-color: black;
     padding: 20px 40px;
     text-align: center;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom:  5px solid #8758ff;
+    overflow: hidden;
+}
+
+#menu-titulo > a{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-decoration: none;
+    background-color: #f34a4a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.0rem;
+    border-bottom-left-radius: 5px;
 }
 
 #menu-conteudo{
     display: flex;
     background-color: #bbb;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .menu-coluna{
