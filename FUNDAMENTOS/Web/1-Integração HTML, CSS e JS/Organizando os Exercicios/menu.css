@@ -1,21 +1,24 @@
 #menu-titulo{
-    font-size: 2rem;
+    font-size: 2.5rem;
     background-color: black;
     padding: 20px 40px;
     text-align: center;
 }
 
 #menu-conteudo{
+    display: flex;
     background-color: #bbb;
 }
 
 .menu-coluna{
     display: flex;
+    flex: 1;
     flex-direction: column;
     text-align: center;
 }
 
 .menu-coluna > a{
+    font-size: 1.3rem;
     padding: 8px 15px;
     text-decoration: none;
     color: black;
@@ -23,4 +26,9 @@
 
 .menu-coluna > a:hover{
     background-color: #999;
+}
+
+.divisao{
+    width: 3px;
+    background-color: #333;
 }
