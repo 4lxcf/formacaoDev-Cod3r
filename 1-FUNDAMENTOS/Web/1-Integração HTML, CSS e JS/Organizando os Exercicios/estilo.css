@@ -7,7 +7,7 @@ body{
     align-items: center;
 }
 
-div{
+#exercicios > div{
     padding: 20px 40px;
     margin: 5px;
     border: 4px solid white;
@@ -15,18 +15,18 @@ div{
     border-radius: 5px;
 }
 
-div:nth-child(1) {
+#exercicios > div:nth-child(1) {
     background-color: #d2001a;
 }
-div:nth-child(2) {
+#exercicios > div:nth-child(2) {
     background-color: #25316d;
 }
-div:nth-child(3) {
+#exercicios > div:nth-child(3) {
     background-color: #d800a6;
 }
-div:nth-child(4) {
+#exercicios > div:nth-child(4) {
     background-color: #319da0;
 }
-div:nth-child(5) {
+#exercicios > div:nth-child(5) {
     background-color: #367e18;
 }
