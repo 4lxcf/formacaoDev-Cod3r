@@ -5,6 +5,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 #exercicios > div{
@@ -29,4 +31,10 @@ body{
 }
 #exercicios > div:nth-child(5) {
     background-color: #367e18;
+}
+
+#exercicios > div:hover {
+    color: #f6cc42;
+    border: 5px solid #f6cc42;
+    font-weight: 700;
 }
