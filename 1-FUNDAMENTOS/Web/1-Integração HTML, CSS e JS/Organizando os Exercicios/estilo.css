@@ -1,40 +1,76 @@
-body{
-    font-family: "Josefin Sans", sans-serif;
-    background-color: #333;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: center;
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 15px;
 }
 
-#exercicios > div{
-    padding: 20px 40px;
-    margin: 5px;
-    border: 4px solid white;
-    font-size: 3rem;
-    border-radius: 5px;
+#exercicios > div {
+  padding: 20px 40px;
+  margin: 5px;
+  border: 4px solid white;
+  font-size: 3rem;
+  border-radius: 5px;
 }
 
 #exercicios > div:nth-child(1) {
-    background-color: #d2001a;
+  background-color: #d2001a;
 }
 #exercicios > div:nth-child(2) {
-    background-color: #25316d;
+  background-color: #25316d;
 }
 #exercicios > div:nth-child(3) {
-    background-color: #d800a6;
+  background-color: #d800a6;
 }
 #exercicios > div:nth-child(4) {
-    background-color: #319da0;
+  background-color: #319da0;
 }
 #exercicios > div:nth-child(5) {
-    background-color: #367e18;
+  background-color: #367e18;
 }
 
 #exercicios > div:hover {
-    color: #f6cc42;
-    border: 5px solid #f6cc42;
-    font-weight: 700;
+  color: #f6cc42;
+  border: 5px solid #f6cc42;
+  font-weight: 700;
+}
+
+h1 {
+    width: 100vw;
+    text-align: center;
+}
+
+input,
+select {
+  font-size: 1.5rem;
+  color: white;
+  background-color: #444;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+
+input {
+    width: 50vw;
+}
+
+input:focus,
+select:focus {
+  background-color: #555;
+}
+
+button {
+  font-size: 1.3rem;
+  color: white;
+  background-color: #149e0f;
+  border-radius: 5px;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
 }
