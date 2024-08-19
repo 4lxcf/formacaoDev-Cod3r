@@ -4,14 +4,36 @@
   </head>
   <body id="exercicios">
     <h1>Pesquisa no Google</h1>
-    <form action="https://www.google.com.br/search">
+    <form name="formsGoogle" action="https://www.google.com.br/search">
+      <!-- HOST LANGUAGE -->
       <select name="hl">
         <option value="pt-BR">Português (Brasil)</option>
         <option value="en-US">Inglês (EUA)</option>
       </select>
+      <!-- (QUERY) -->
       <input type="text" name="q" placeholder="Digite o que deseja pesquisar" />
       <button>Pesquisar</button>
     </form>
-    <script></script>
+    <script>
+      // HTMLCollection
+      console.log(document.forms);
+      console.log(document.forms[0]);
+
+      // NodeList
+      const lista = document.getElementsByName("formsGoogle");
+      console.log(lista);
+
+      const campoConsulta = document.getElementsByName('q')[0]
+      console.log(campoConsulta)
+      campoConsulta.value = "Pendrive"
+
+      // Outra forma de acessar a DOM
+      console.log(document.formsGoogle)
+      console.log(document.formsGoogle.q)
+      console.log(document.formsGoogle.hl)
+
+      document.formsGoogle.q.value = 'Pc gamer'
+      document.formsGoogle.hl.value = 'en-US'
+    </script>
   </body>
 </html>
