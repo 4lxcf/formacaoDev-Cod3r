@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../Organizando os Exercicios/estilo.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <p>LISTA DE APROVADOS</p>
+        <ul>
+          <li>Fernanda</li>
+          <li>Augusto</li>
+          <li>Carmen</li>
+          <li>Luis</li>
+        </ul>
+        <p>LISTA DE REPROVADOS</p>
+        <ul>
+          <li>Charles</li>
+          <li>Beltrão</li>
+          <li>Hermes</li>
+        </ul>
+      </section>
+    </main>
+    <script>
+      // Selecionar os primeiros itens de cada lista
+      const primeiros = document.querySelectorAll(
+        "main > section li:nth-child(1)"
+      );
+      primeiros.forEach((no) => (no.textContent = `>>> ${no.textContent} <<<`));
+
+      itens = document.querySelectorAll("main > section li");
+      const ultimoItem = itens[itens.length - 1];
+      const listaDeReprovados = ultimoItem.parentNode;
+      const primeiroItem = listaDeReprovados.firstElementChild;
+
+      // Mostrando na tela todos os NODES do componente PAI de ultimoItem
+      console.log(ultimoItem.parentNode.childNodes)
+
+      // Mostrando na tela o primeiro ELEMENTO e ultimo ELEMENTO de listaDeReprovados 
+      console.log(listaDeReprovados.firstElementChild)
+      console.log(listaDeReprovados.lastElementChild)
+
+      // Mostrando na tela o proximo NODE IRMÃO e o proximo ELEMENTO IRMÃO de primeiroItem
+      console.log(primeiroItem.nextSibling)
+      console.log(primeiroItem.nextElementSibling)
+    </script>
+  </body>
+</html>
