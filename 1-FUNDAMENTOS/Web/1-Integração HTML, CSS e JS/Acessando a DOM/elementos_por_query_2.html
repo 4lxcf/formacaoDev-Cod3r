@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../Organizando os Exercicios/estilo.css" />
+  </head>
+  <body id="exercicios">
+    <div id="primeiro" class="primeiro">#primeiro</div>
+    <div id="segundo" class="destaque" destaque="2">#segundo</div>
+    <div id="terceiro" class="destaque" destaque="1">#terceiro</div>
+    <div id="quarto">#quarto</div>
+    <div id="quinto" class="ultimo">#quinto</div>
+
+    <script>
+      function selecionarTodos(seletor) {
+        return document.querySelectorAll(seletor);
+      }
+
+      selecionarTodos(".destaque").forEach((el) => console.log(el));
+      console.log(selecionarTodos('.primeiro').length)
+      console.log(selecionarTodos('.ultimo').item(0))
+    </script>
+  </body>
+</html>
