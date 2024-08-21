@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../Organizando os Exercicios/estilo.css" />
+  </head>
+  <body id="exercicios">
+    <main class="coluna">
+      <p>Paragrafo #01</p>
+      <article>
+        <p>Paragrafo #02</p>
+      </article>
+      <p>Paragrafo #03</p>
+      <article>
+        <p>Paragrafo #04</p>
+      </article>
+      <article>
+        <p>Paragrafo #05</p>
+      </article>
+    </main>
+    <script>
+      // Os parágrafos que estão fora da TAG <article>
+      // 1. Adicionar o texto 'Fora' no inicio do conteudo
+      // 2. Adicionar a classe 'destaque'
+      const itensDeFora = document.querySelectorAll("main > p");
+      itensDeFora.forEach((element) => {
+        element.textContent = `[FORA] ${element.textContent}`;
+        element.classList.add("destaque");
+        console.log(element.classList);
+      });
+    </script>
+  </body>
+</html>

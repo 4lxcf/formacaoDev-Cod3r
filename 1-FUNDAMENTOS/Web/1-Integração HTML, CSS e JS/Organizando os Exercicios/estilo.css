@@ -34,10 +34,17 @@ body {
   background-color: #367e18;
 }
 
-#exercicios > div:hover {
+#exercicios .destaque {
   color: #f6cc42;
   border: 5px solid #f6cc42;
   font-weight: 700;
+}
+
+#exercicios .coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
 }
 
 h1 {
