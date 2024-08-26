@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../Organizando os Exercicios/estilo.css" />
+  </head>
+  <body id="exercicios">
+    <div>
+      <a href="https://www.cod3r.com.br">Cod3r</a>
+    </div>
+    <div id="logo">
+      <img
+        src="http://files.cod3r.com.br/curso-web/logo-estreita.png"
+        alt="logo"
+      />
+    </div>
+    <script>
+      const img = document.querySelector('img')
+      //Formas de acessar um atributo:  
+      //Forma #01
+      console.log('src #1: ', img.getAttribute('src'))
+      //Forma #02
+      console.log('src #2: ', img.src)
+      //Forma #03
+      console.log('src #3: ', img['src'])
+      
+      const link = document.querySelector('a')
+      
+      link.innerHTML = 'Novo Site da Coder'
+    </script>
+  </body>
+</html>
