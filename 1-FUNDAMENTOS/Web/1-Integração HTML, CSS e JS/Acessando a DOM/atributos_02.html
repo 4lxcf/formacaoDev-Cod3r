@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../Organizando os Exercicios/estilo.css" />
+  </head>
+  <body id="exercicios">
+    <main class="coluna">
+      <label for="compras">Compras</label>
+      <ul id="compras" destino="escritorio" data-urgencia="5">
+        <li>Café</li>
+        <li>Água</li>
+        <li>Copo Descartável</li>
+      </ul>
+    </main>
+    <script>
+      const lista = document.querySelector("main ul[destino='escritorio']");
+      console.log("childNodes", lista.childNodes);
+      console.log("destino", lista.destino); //Atributos personalizados não podem ser referenciados com notação de '.'
+    </script>
+  </body>
+</html>
