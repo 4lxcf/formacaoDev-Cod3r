@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../Organizando os Exercicios/estilo.css" />
+  </head>
+  <body id="exercicios">
+    <div>
+      <p>Texto Inicial</p>
+    </div>
+    <script>
+      const div = document.querySelector("div");
+      div.innerHTML = "Texto alterado com inner";
+      // div.outerHTML = 'Texto alterado com outer' => Modifica o elemento PAI também
+
+      div.insertAdjacentHTML("beforeBegin", "<p>Antes do Inicio</p>");
+      div.insertAdjacentHTML("afterBegin", "<p>Depois do Inicio</p>");
+      div.insertAdjacentHTML("beforeEnd", "<p>Antes do Fim</p>");
+      div.insertAdjacentHTML("afterEnd", "<p>Depois do Fim</p>");
+    </script>
+  </body>
+</html>
