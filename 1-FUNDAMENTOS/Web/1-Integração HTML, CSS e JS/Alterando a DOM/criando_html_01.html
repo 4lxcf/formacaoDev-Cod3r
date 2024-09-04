@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../Organizando os Exercicios/estilo.css" />
+  </head>
+  <body id="exercicios">
+    <script>
+      const body = document.querySelector("body");
+      const div1 = document.createElement("div"); //Criação de DIVs
+
+      div1.innerHTML = "Primeiro";
+      div1.classList.add("destaque");
+
+      const div2 = document.createElement("div");
+      div2.innerHTML = "Segundo";
+      div2.setAttribute("div2.atributo", "valor");
+
+      const p = document.createElement("p");
+      p.innerHTML = "Terceiro";
+
+      const div3 = document.createElement("div");
+      div3.appendChild(p);
+
+      body.appendChild(div1); // Adiciona um elemento FILHO no final do elemento PAI
+      body.appendChild(div2);
+      body.appendChild(div3);
+
+      const texto = document.createTextNode("Antes de ...");
+      div3.insertBefore(texto, div3.childNodes[0]); // Insere o valor antes do Nó especificado
+
+      const div4 = div3.cloneNode(true) // Clona um Nó
+
+      body.appendChild(div4)
+      body.removeChild(div3) // Remove o elemento FILHO de um elemento PAI
+    </script>
+  </body>
+</html>
