@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../Organizando os Exercicios/estilo.css" />
+  </head>
+  <body id="exercicios">
+    <div>
+      <a esperar="8" href="http://google.com.br">Google</a>
+    </div>
+    <div>
+      <a esperar="2" href="http://yahoo.com.br">Yahoo</a>
+    </div>
+    <script>
+      function navegarComEspera(evento) {
+        evento.preventDefault(); // Comando para evitar o comportamento padrão do link
+
+        const link = evento.target;
+        const segundos = +link.getAttribute("esperar");
+
+        setTimeout(() => {
+          window.location.href = link.href;
+        }, segundos * 1000);
+      }
+
+      const linksParaEsperar = document.querySelectorAll("a[esperar]");
+      linksParaEsperar.forEach((link) => (link.onclick = navegarComEspera));
+    </script>
+  </body>
+</html>
