@@ -18,19 +18,19 @@ body {
   border-radius: 5px;
 }
 
-#exercicios > div:nth-child(1) {
+#exercicios div:nth-child(1) {
   background-color: #d2001a;
 }
-#exercicios > div:nth-child(2) {
+#exercicios div:nth-child(2) {
   background-color: #25316d;
 }
-#exercicios > div:nth-child(3) {
+#exercicios div:nth-child(3) {
   background-color: #d800a6;
 }
-#exercicios > div:nth-child(4) {
+#exercicios div:nth-child(4) {
   background-color: #319da0;
 }
-#exercicios > div:nth-child(5) {
+#exercicios div:nth-child(5) {
   background-color: #367e18;
 }
 
@@ -48,8 +48,8 @@ body {
 }
 
 h1 {
-    width: 100vw;
-    text-align: center;
+  width: 100vw;
+  text-align: center;
 }
 
 input,
@@ -64,7 +64,7 @@ select {
 }
 
 input {
-    width: 50vw;
+  width: 50vw;
 }
 
 input:focus,

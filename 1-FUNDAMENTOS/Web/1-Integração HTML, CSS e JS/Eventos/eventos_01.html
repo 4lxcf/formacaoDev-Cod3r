@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../Organizando os Exercicios/estilo.css" />
+  </head>
+  <body id="exercicios">
+    <main class="coluna">
+      <div id="resultado" onclick="limpar()" style="cursor: pointer">-</div>
+      <button onclick="sim()">SIM</button>
+      <button onclick="nao()">NÃO</button>
+    </main>
+    <script>
+      const div = document.querySelector("#resultado");
+
+      function limpar() {
+        div.innerHTML = "-";
+      }
+
+      function sim() {
+        div.innerHTML = "SIM";
+      }
+
+      function nao() {
+        div.innerHTML = "NÃO";
+      }
+    </script>
+  </body>
+</html>
