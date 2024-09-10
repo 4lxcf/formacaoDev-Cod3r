@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../Organizando os Exercicios/estilo.css" />
+  </head>
+  <body id="exercicios">
+    <div style="user-select: none">Elemento</div>
+
+    <script>
+      const div = document.querySelector("div");
+      div.style.position = "absolute";
+
+      div.onmousemove = function (evento) {
+        const item = evento.target;
+        item.style.cursor = "move";
+
+        if (evento.buttons) {
+          item.style.top = evento.clientY - item.clientHeight / 2;
+          item.style.left = evento.clientX - item.clientWidth / 2;
+        }
+      };
+    </script>
+  </body>
+</html>
