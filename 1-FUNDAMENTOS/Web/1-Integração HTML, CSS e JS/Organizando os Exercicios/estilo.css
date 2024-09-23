@@ -10,7 +10,7 @@ body {
   gap: 15px;
 }
 
-#exercicios > div {
+#exercicios div {
   padding: 20px 40px;
   margin: 5px;
   border: 4px solid white;
