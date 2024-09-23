@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../Organizando os Exercicios/estilo.css" />
+  </head>
+  <body id="exercicios">
+    <main class="coluna">
+      <h1>Formulário</h1>
+
+      <form class="coluna" action="https://google.com/search">
+        <input type="text" name="q" placeholder="Digite o termo..." />
+        <select name="hl">
+          <option value="pt-br">Português (Brasil)</option>
+          <option value="en-usr">Inglês (EUA)</option>
+        </select>
+        <button web-submit>Pesquisar</button>
+      </form>
+    </main>
+
+    <script>
+      function submit(evento) {
+        evento.preventDefault();
+
+        const form = evento.target.parentNode;
+        const data = new FormData(form);
+        console.log(data.get("q"));
+      }
+
+      const botoes = document.querySelectorAll("[web-submit]");
+      botoes.forEach((e) => (e.onclick = submit));
+    </script>
+  </body>
+</html>
