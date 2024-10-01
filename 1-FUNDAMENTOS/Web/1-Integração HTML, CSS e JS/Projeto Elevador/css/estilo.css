@@ -1,4 +1,6 @@
 /* ESTILO GERAL */
+@import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -9,6 +11,7 @@ body {
   flex-direction: column;
   background-color: black;
   height: 100vh;
+  font-family: "Syne Mono", monospace;
 }
 
 .cenario {
@@ -22,6 +25,35 @@ body {
 .controles {
   height: 100px;
   background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.controles .mostrador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #22f522;
+  border: 10px solid #666;
+  height: 100%;
+  width: 200px;
+  border-radius: 8px;
+  font-size: 2.5rem;
+}
+
+.controles button {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  font-size: 2rem;
+  border: 6px solid #999;
+}
+
+.controles button.destaque {
+  border-color: yellow;
 }
 
 /* ESTILO DA RUA */
