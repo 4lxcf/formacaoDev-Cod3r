@@ -114,6 +114,7 @@ body {
 .fosso {
   display: flex;
   justify-content: center;
+  align-items: end;
   position: relative;
   background-color: #fff9;
   flex: 1;
@@ -123,7 +124,7 @@ body {
   border: 3px solid black;
   border-top-width: 10px;
   background-color: #fffa;
-  height: 113px;
+  /* height: 113px; */
   width: 80%;
 }
 
@@ -155,6 +156,7 @@ body {
 }
 
 .terreo {
+  border-bottom: 2px solid white;
   display: flex;
   flex: 1;
   justify-content: center;
