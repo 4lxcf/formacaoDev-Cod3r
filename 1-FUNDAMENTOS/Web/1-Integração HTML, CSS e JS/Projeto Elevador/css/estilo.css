@@ -114,18 +114,18 @@ body {
 .fosso {
   display: flex;
   justify-content: center;
-  align-items: end;
   position: relative;
   background-color: #fff9;
   flex: 1;
 }
 
 .elevador {
+  position: absolute;
   border: 3px solid black;
   border-top-width: 10px;
   background-color: #fffa;
-  /* height: 113px; */
   width: 80%;
+  bottom: 0;
 }
 
 .andar {
