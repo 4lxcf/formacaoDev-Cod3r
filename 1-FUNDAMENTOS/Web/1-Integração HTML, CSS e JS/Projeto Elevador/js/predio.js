@@ -63,11 +63,28 @@
     const numero = andar === "T" ? 0 : +andar;
 
     const elevador = document.querySelector(".elevador");
-    const valorDeElevador = +elevador.style.bottom.replace("px", "");
 
-    elevador.style.bottom = valorDeElevador + numero * obterTamanho();
+    elevador.style.bottom = numero * obterTamanho();
+  }
+
+  function botoesElevador() {
+    const botoes = document.querySelectorAll("[andarSelecionado]");
+    botoes.forEach((botao) => {
+      const andarSelecionado = botao.getAttribute("andarSelecionado");
+      const visor = document.querySelector(".mostrador");
+
+      botao.onclick = () => {
+        moverElevador(andarSelecionado);
+
+        if (andarSelecionado === "T") {
+          visor.innerHTML = "Térreo";
+        } else {
+          visor.innerHTML = `${andarSelecionado}º Andar`;
+        }
+      };
+    });
   }
 
   criarElevador();
-  moverElevador("0");
+  botoesElevador();
 })();
