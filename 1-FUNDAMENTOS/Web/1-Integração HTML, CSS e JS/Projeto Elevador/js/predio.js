@@ -70,6 +70,10 @@
     const posFinal = numero * obterTamanho();
     const direcao = posFinal > posInicial;
 
+    if (emMovimento()) return;
+
+    iniciarMovimentoElevador();
+    ligarBotao(andar);
     visorElevador(direcao ? "Subindo" : "Descendo");
 
     let temporizador = setInterval(() => {
@@ -83,6 +87,8 @@
 
       if (terminou) {
         clearInterval(temporizador);
+        finalizarMovimentoElevador();
+        desligarBotao(andar);
         visorElevador(numero);
       }
     }, 30);
@@ -100,6 +106,22 @@
     });
   }
 
+  function ligarBotao(botaoDoAndar) {
+    const botao = document.querySelector(
+      `[andarSelecionado="${botaoDoAndar}"]`
+    );
+
+    botao.classList.add("destaque");
+  }
+
+  function desligarBotao(botaoDoAndar) {
+    const botao = document.querySelector(
+      `[andarSelecionado="${botaoDoAndar}"]`
+    );
+
+    botao.classList.remove("destaque");
+  }
+
   function visorElevador(info) {
     const visor = document.querySelector(".mostrador");
 
@@ -110,6 +132,21 @@
     } else {
       visor.innerHTML = `${info}º Andar`;
     }
+  }
+
+  function iniciarMovimentoElevador() {
+    const elevador = document.querySelector(".elevador");
+    elevador.setAttribute("moving", "");
+  }
+
+  function finalizarMovimentoElevador() {
+    const elevador = document.querySelector(".elevador");
+    elevador.removeAttribute("moving");
+  }
+
+  function emMovimento() {
+    const elevador = document.querySelector(".elevador");
+    return elevador.hasAttribute("moving");
   }
 
   criarElevador();
