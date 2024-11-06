@@ -1,16 +1,22 @@
 import pensador from "pensador-scrap";
 import fs from "fs";
 
-const obj = await pensador.search({ query: "Platao", limit: 10 });
+const autor = "Platao";
+const obj = await pensador.search({ query: autor, limit: 10 });
 
-const pensamentos = obj.success.thought;
-const numeroAleatorio = Math.floor(Math.random() * pensamentos.length);
-const pensamentoSelecionado = pensamentos[numeroAleatorio].content;
-const autor = pensamentos[numeroAleatorio].author;
+let pensamentoSalvo;
 
-const pensamentoSalvo = `=> O pensamento escolhido de ${autor} foi: "${pensamentoSelecionado}"\n`;
+try {
+  const pensamentos = obj.success.thought;
+  const numeroAleatorio = Math.floor(Math.random() * pensamentos.length);
+  const pensamentoSelecionado = pensamentos[numeroAleatorio].content;
 
-fs.appendFileSync("frases.txt", pensamentoSalvo, "utf8");
+  pensamentoSalvo = `=> O pensamento escolhido de ${autor} foi: "${pensamentoSelecionado}"\n`;
+} catch (error) {
+  pensamentoSalvo = `=> Este ${autor} não existe na plataforma."\n`;
+} finally {
+  fs.appendFileSync("frases.txt", pensamentoSalvo, "utf8");
+  const texto = fs.readFileSync("frases.txt", "utf8");
 
-const texto = fs.readFileSync("frases.txt", "utf8");
-console.log(texto);
+  console.log(texto);
+}
