@@ -1,26 +1,18 @@
 [
     {
-        "nome": "Felipe",
-        "id": 11
-    },
-    {
-        "nome": "Monize",
-        "id": 16
-    },
-    {
         "nome": "Ana",
-        "id": 313
+        "idGlobal": 0
     },
     {
         "nome": "Felipe",
-        "id": 411
+        "idGlobal": 1
     },
     {
         "nome": "Carla",
-        "id": 51
+        "idGlobal": 2
     },
     {
         "nome": "Monize",
-        "id": 616
+        "idGlobal": 3
     }
 ]

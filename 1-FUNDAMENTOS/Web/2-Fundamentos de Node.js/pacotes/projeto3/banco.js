@@ -1,6 +1,8 @@
 import fs from "fs";
 
 let bancoDeDados = _carregarDados(); // Formato {nome, id}
+let ultimoID = bancoDeDados[bancoDeDados.length - 1]?.id ?? -1;
+let idGlobal = ultimoID + 1;
 
 function _carregarDados() {
   const dadosJSON = fs.readFileSync("banco.json", "utf8");
@@ -14,7 +16,8 @@ export function persistirValores() {
 }
 
 export function salvar(nome, id) {
-  bancoDeDados.push({ nome, id });
+  bancoDeDados.push({ nome, idGlobal });
+  idGlobal++;
 }
 
 export function deletar(id) {
