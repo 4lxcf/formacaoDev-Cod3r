@@ -15,9 +15,15 @@ export function persistirValores() {
   fs.writeFileSync("banco.json", dadosJSON, "utf8");
 }
 
-export function salvar(nome, id) {
-  bancoDeDados.push({ nome, idGlobal });
-  idGlobal++;
+export function editarOuSalvar(nome, id) {
+  const indice = bancoDeDados.findIndex((obj) => obj.id === id);
+
+  if (indice >= 0) {
+    bancoDeDados[indice].nome = nome;
+  } else {
+    bancoDeDados.push({ nome, id: idGlobal });
+    idGlobal++;
+  }
 }
 
 export function deletar(id) {

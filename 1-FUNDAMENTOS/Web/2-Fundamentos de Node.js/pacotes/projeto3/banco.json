@@ -1,18 +1,18 @@
 [
     {
         "nome": "Ana",
-        "idGlobal": 0
+        "id": 0
     },
     {
         "nome": "Felipe",
-        "idGlobal": 1
+        "id": 1
     },
     {
-        "nome": "Carla",
-        "idGlobal": 2
+        "nome": "Ana",
+        "id": 2
     },
     {
         "nome": "Monize",
-        "idGlobal": 3
+        "id": 3
     }
 ]

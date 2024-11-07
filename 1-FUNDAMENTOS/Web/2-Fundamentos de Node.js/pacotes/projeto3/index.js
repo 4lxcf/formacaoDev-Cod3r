@@ -1,13 +1,13 @@
-import { salvar, deletar, ler, persistirValores } from "./banco.js";
+import { editarOuSalvar, deletar, ler, persistirValores } from "./banco.js";
 
-// console.log(ler());
+console.log(ler());
 
-salvar("Ana");
-salvar("Felipe");
-salvar("Carla");
-salvar("Monize");
+editarOuSalvar("Ana", 2);
+// editarOuSalvar("Felipe");
+// editarOuSalvar("Carla");
+// editarOuSalvar("Monize");
 
 console.log("<-------------------------------------------------->");
-// console.log(ler());
+console.log(ler());
 
 persistirValores();
