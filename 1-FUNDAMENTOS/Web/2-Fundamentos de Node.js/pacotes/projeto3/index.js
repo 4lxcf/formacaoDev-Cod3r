@@ -1,13 +1,15 @@
 import { editarOuSalvar, deletar, ler, persistirValores } from "./banco.js";
+import { menu, end } from "./interface.js";
 
-console.log(ler());
+const menuItems = [
+  " Add ",
+  " Edit ",
+  " Delete ",
+  " See All ",
+  " Keep ",
+  " Exit ",
+];
 
-editarOuSalvar("Ana", 2);
-// editarOuSalvar("Felipe");
-// editarOuSalvar("Carla");
-// editarOuSalvar("Monize");
-
-console.log("<-------------------------------------------------->");
-console.log(ler());
-
-persistirValores();
+const selected = await menu(menuItems);
+console.log(selected);
+end();
