@@ -8,7 +8,7 @@ export async function menu(itens) {
   };
   const selectedOption = await term.singleLineMenu(itens, options).promise;
 
-  return selectedOption;
+  return selectedOption.selectedText;
 }
 
 export function end() {
