@@ -14,3 +14,18 @@ export async function menu(itens) {
 export function end() {
   process.exit();
 }
+
+export async function read(text) {
+  term(`${text}\n\n`);
+  const readText = await term.inputField().promise;
+
+  return readText;
+}
+
+export function greenfy(text) {
+  term.green(`\n\n${text}`);
+}
+
+export function bluefy(text) {
+  term.blue(`\n\n${text}`);
+}
