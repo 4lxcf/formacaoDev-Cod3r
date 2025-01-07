@@ -1,26 +1,18 @@
 [
     {
-        "nome": "Bia",
-        "id": 0
-    },
-    {
-        "nome": "Felipe",
-        "id": 1
-    },
-    {
-        "nome": "Ana",
-        "id": 2
-    },
-    {
-        "nome": "Monize",
-        "id": 3
-    },
-    {
         "nome": "Alexandre",
-        "id": 4
+        "id": "bc8c3fbf-eea2-4678-8330-41a398d399a2"
     },
     {
-        "nome": "Tai",
-        "id": 5
+        "nome": "Tai <3",
+        "id": "ba351d9d-4c4f-441e-8c54-14babbf69c5c"
+    },
+    {
+        "nome": "Roberto",
+        "id": "ac6c3464-77c2-452a-a9a4-ceb3d8a7ed3f"
+    },
+    {
+        "nome": "Carlos",
+        "id": "b2e92b9e-7a10-4d77-a124-a84e1b5941b7"
     }
 ]

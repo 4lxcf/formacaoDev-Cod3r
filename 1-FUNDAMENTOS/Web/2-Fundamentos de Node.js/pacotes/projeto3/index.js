@@ -1,5 +1,5 @@
 import { editarOuSalvar, deletar, ler, persistirValores } from "./banco.js";
-import { menu, end, read, bluefy, greenfy } from "./interface.js";
+import { menu, end, read, bluefy, greenfy, getUserID } from "./interface.js";
 
 const menuItems = [
   " Add ",
@@ -21,14 +21,14 @@ while (true) {
       greenfy("Feito!");
       break;
     case "edit":
-      id = await read("Digite o ID do usuário: ");
+      id = await getUserID(ler());
       name = await read("Digite o novo nome de usuário: ");
-      editarOuSalvar(name, +id);
+      editarOuSalvar(name, id);
       greenfy("Feito!");
       break;
     case "delete":
-      id = await read("Digite o ID do usuário: ");
-      deletar(+id);
+      id = await getUserID(ler());
+      deletar(id);
       greenfy("Feito!");
       break;
     case "see all":

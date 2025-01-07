@@ -1,8 +1,7 @@
 import fs from "fs";
+import { v4 as uuidv4 } from "uuid";
 
 let bancoDeDados = _carregarDados(); // Formato {nome, id}
-let ultimoID = bancoDeDados[bancoDeDados.length - 1]?.id ?? -1;
-let idGlobal = ultimoID + 1;
 
 function _carregarDados() {
   const dadosJSON = fs.readFileSync("banco.json", "utf8");
@@ -21,8 +20,8 @@ export function editarOuSalvar(nome, id) {
   if (indice >= 0) {
     bancoDeDados[indice].nome = nome;
   } else {
-    bancoDeDados.push({ nome, id: idGlobal });
-    idGlobal++;
+    const idUnico = uuidv4();
+    bancoDeDados.push({ nome, id: idUnico });
   }
 }
 

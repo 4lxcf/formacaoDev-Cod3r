@@ -11,8 +11,15 @@ export async function menu(itens) {
   return selectedOption.selectedText;
 }
 
-export function end() {
-  process.exit();
+export async function getUserID(itens) {
+  let options = {
+    style: term.inverse,
+    selectedStyle: term.white.bgCyan,
+  };
+
+  const selectedOption = await term.singleColumnMenu(itens, options).promise;
+  const userID = selectedOption.selectedText.split("|")[1].split(":")[1].trim();
+  return userID;
 }
 
 export async function read(text) {
@@ -28,4 +35,8 @@ export function greenfy(text) {
 
 export function bluefy(text) {
   term.blue(`\n\n${text}`);
+}
+
+export function end() {
+  process.exit();
 }
