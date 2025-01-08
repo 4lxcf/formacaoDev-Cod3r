@@ -1,0 +1,28 @@
+:root {
+  --tamanho-da-fonte: 1.4rem;
+  --cor-da-fonte: white;
+  --raio-borda: 5px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--cor-da-fonte);
+  background: #1f1c2c;
+  background: -webkit-linear-gradient(to right, #928dab, #1f1c2c);
+  background: linear-gradient(to right, #928dab, #1f1c2c);
+  font-family: "Montserrat", serif;
+}
+
+.destaque {
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+.imagem {
+  height: 180px;
+  border-radius: 50%;
+}
