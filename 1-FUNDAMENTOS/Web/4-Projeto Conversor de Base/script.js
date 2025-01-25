@@ -6,13 +6,14 @@ const result = document.querySelector("#result");
 
 button.addEventListener("click", () => {
   let convertedNumber;
-  const actualNumber = +number.value;
+  const actualNumber = number.value;
   const targetBaseNumber = transformBaseNameToNumber(target_base.value);
 
   if (target_base.value === initial_base.value) {
     convertedNumber = actualNumber;
   } else {
-    convertedNumber = actualNumber.toString(targetBaseNumber);
+    const middleNumber = parseInt(actualNumber, initial_base.value);
+    convertedNumber = +middleNumber.toString(+target_base.value);
   }
 
   result.innerHTML = `${actualNumber}<sub>${initial_base.value}</sub> => ${convertedNumber}<sub>${target_base.value}</sub>`;
