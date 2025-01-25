@@ -18,7 +18,7 @@
 
     <div class="switches">
       <label for="initial-base" class="label">De:</label>
-      <select id="initial-base">
+      <select class="input" id="initial-base">
         <option value="10">Decimal</option>
         <option value="2">Binario</option>
         <option value="8">Octal</option>
@@ -26,7 +26,7 @@
       </select>
 
       <label for="target-base" class="label">Para:</label>
-      <select id="target-base">
+      <select class="input" id="target-base">
         <option value="10">Decimal</option>
         <option value="2">Binario</option>
         <option value="8">Octal</option>
@@ -34,12 +34,12 @@
       </select>
     </div>
 
-    <div class="input">
-      <input id="number" type="text" placeholder="0" />
+    <div>
+      <input class="input" id="number" type="text" placeholder="0" />
       <button id="button">CONVERTER</button>
     </div>
 
-    <div id="result">RESULTADO</div>
+    <div id="result" class="invisible"></div>
 
     <script src="script.js"></script>
   </body>
