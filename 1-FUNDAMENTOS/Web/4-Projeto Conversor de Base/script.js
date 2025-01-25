@@ -15,7 +15,7 @@ button.addEventListener("click", () => {
     convertedNumber = actualNumber.toString(targetBaseNumber);
   }
 
-  console.log(`CONVERTED_NUMBER: ${convertedNumber}`);
+  result.innerHTML = `${actualNumber}<sub>${initial_base.value}</sub> => ${convertedNumber}<sub>${target_base.value}</sub>`;
 });
 
 function transformBaseNameToNumber(baseName) {
