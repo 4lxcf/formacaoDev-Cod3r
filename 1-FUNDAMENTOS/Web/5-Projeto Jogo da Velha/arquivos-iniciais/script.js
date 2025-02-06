@@ -29,6 +29,7 @@ class TicTacToe {
     if (this.#isValidAction(action)) {
       this.#render(action);
       this.#switchTurn();
+      this.#isGameOver(this.board);
     } else {
       console.log("AÇÃO INVÁLIDA");
     }
@@ -67,6 +68,17 @@ class TicTacToe {
     return true;
   }
 
+  #isGameOver(board) {
+    let checkBoard = board;
+
+    if (checkBoard.flat().includes(null)) {
+      return false;
+    }
+
+    console.log("O JOGO FINALIZOU EM EMPATE");
+    return true;
+  }
+
   mapping() {
     let matrix = this.board
       .map((item) => item.map((position) => position ?? "-").join(" "))
@@ -79,6 +91,11 @@ class TicTacToe {
 const jogoDaVelha = new TicTacToe();
 jogoDaVelha.play(new Action(1, 1));
 jogoDaVelha.play(new Action(1, 2));
+jogoDaVelha.play(new Action(1, 3));
+jogoDaVelha.play(new Action(2, 1));
 jogoDaVelha.play(new Action(2, 2));
-jogoDaVelha.play(new Action(2, 2));
+jogoDaVelha.play(new Action(2, 3));
+jogoDaVelha.play(new Action(3, 1));
+jogoDaVelha.play(new Action(3, 2));
+jogoDaVelha.play(new Action(3, 3));
 console.log(jogoDaVelha.mapping());
