@@ -18,6 +18,7 @@ class TicTacToe {
     this.turn = player1;
     this.size = 3;
     this.board = this.#initBoard();
+    this.winner = null;
   }
 
   #initBoard() {
@@ -55,6 +56,14 @@ class TicTacToe {
       return false;
     }
 
+    if (this.board[line - 1][column - 1] !== null) {
+      return false;
+    }
+
+    if (this.winner) {
+      return false;
+    }
+
     return true;
   }
 
@@ -70,5 +79,6 @@ class TicTacToe {
 const jogoDaVelha = new TicTacToe();
 jogoDaVelha.play(new Action(1, 1));
 jogoDaVelha.play(new Action(1, 2));
+jogoDaVelha.play(new Action(2, 2));
 jogoDaVelha.play(new Action(2, 2));
 console.log(jogoDaVelha.mapping());
